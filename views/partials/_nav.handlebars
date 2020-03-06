@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+  <div class="container">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+      
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Post</a>
+          <div class="dropdown-menu">
+            <a href="/posts" class="dropdown-item">Post</a>
+            <a href="/posts/add" class="dropdown-item">Add Post</a>
+          </div>
+        
+        </li>
+          <li class="nav-item"></li>
+           <a href="/users/logout" class="nav-link">Logout</a>
+
+        {{else}}
+          <li class="nav-item"></li>
+        <a href="/users/login" class="nav-link">Login</a>
+         <li class="nav-item"></li>
+        <a href="/users/register" class="nav-link">Sign Up</a>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
